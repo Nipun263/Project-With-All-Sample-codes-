@@ -1,0 +1,9 @@
+package com.automationpractice.pages;
+
+public abstract class TT {
+	
+	int a =10;
+	
+	public abstract void v1();
+
+}

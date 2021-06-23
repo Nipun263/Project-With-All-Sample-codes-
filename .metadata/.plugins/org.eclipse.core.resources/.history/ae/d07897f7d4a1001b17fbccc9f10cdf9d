@@ -1,0 +1,31 @@
+package com.automationpractice.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class ABCD {
+	
+	WebDriver driver ;
+	
+	public ABCD(WebDriver ldriver) {
+		this.driver=ldriver;
+	}
+	
+	@FindBy(xpath = "")
+	WebElement userName;
+	
+	@FindBy(xpath = "")
+	WebElement userPassword;
+	
+	
+	public void userCredentials(String NAMEOFUSER) {
+		userName.sendKeys(NAMEOFUSER);
+	}
+	
+	
+	
+	
+	
+
+}

@@ -1,0 +1,16 @@
+package com.automationpractice.test;
+
+import org.testng.TestNG;
+
+public class TestRunner {
+	
+	static TestNG testNg;
+
+	public static void main(String[] args) {
+		TestNG testNg = new TestNG();
+		
+		
+		
+	}
+
+}

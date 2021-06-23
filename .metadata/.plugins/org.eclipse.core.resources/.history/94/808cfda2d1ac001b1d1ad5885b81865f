@@ -1,0 +1,62 @@
+package com.automationpractice.test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.automationpractice.pages.DynamicTableHandling;
+import com.automationpractice.pages.SignUpPage;
+import com.automationpractice.pages.UserDetailPage;
+import com.automationpractice.utility.BrowserFactory;
+
+public class NewUserSignUpTest2 {
+	WebDriver driver;
+
+	@BeforeClass
+	public void setUp() {
+	driver = BrowserFactory.startApplication(driver, "Firefox", "http://automationpractice.com/index.php");
+	}
+	
+	
+	
+	
+	@Test(priority = 1 )
+	
+	public void newUserSignUp() throws InterruptedException {
+	SignUpPage signUp = PageFactory.initElements(driver, SignUpPage.class);
+	signUp.signInNewUser("Nipun.Verma");
+	
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	@Test(priority = 2)
+		
+	  public void passUserCredentials() throws InterruptedException {
+	  UserDetailPage userCredentails =  PageFactory.initElements(driver, UserDetailPage.class);
+	  userCredentails.userDetails("Nipun", "Verma" , "Germany" ,"Alabama" ,"263 Sector 26" , "999999999");
+
+	  }
+	 
+	
+	
+	  
+	public void dynamicTableHandlingMethod() {
+		  DynamicTableHandling DHH = 	  PageFactory.initElements(driver, DynamicTableHandling.class);
+		  DHH.dynamicTableSetUp();
+		
+	}
+	
+	  @AfterClass
+	public void tearDown() {
+		driver.quit();
+	}
+
+}
