@@ -7,23 +7,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+
+import Utility.BrowserSetup;
 
 public class ColourChange {
 	
 WebDriver driver;
 	
-	@BeforeSuite
-	public  void setUp() {
-		System.setProperty("webdriver.gecko.driver","C:\\Users\\e5584133\\Downloads\\geckodriver.exe");
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(900, TimeUnit.SECONDS);
-	}
-	
+
+@BeforeMethod
+public void browserIntialization() {
+driver = 	BrowserSetup.StartApplication(driver, "Chrome");
+}
+
 	
 	@Test
 	public void verifyColourChange() {

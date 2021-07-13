@@ -14,28 +14,25 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import Utility.BrowserSetup;
 import Utils.ExcelData;
 
 
 public class CreateAccount extends ExcelData{
 	WebDriver driver;
 	
-	@BeforeClass
-	public  void setUp() {
-		System.setProperty("webdriver.gecko.driver","C:\\Users\\e5584133\\Downloads\\geckodriver.exe");
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(900, TimeUnit.SECONDS);
-		
 
+	@BeforeMethod
+	public void browserIntialization() {
+	driver = 	BrowserSetup.StartApplication(driver, "Chrome");
 	}
+	
 
 	
 	@Test(priority=1 )

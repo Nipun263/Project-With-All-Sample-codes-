@@ -3,12 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="LoginSuite.SelectClass">
+      <class name="LoginSuite.AudioCaptcha">
         <methods>
-          <include name="handleDropdown"/>
-          <include name="setUp"/>
+          <include name="registerNewUser"/>
+          <include name="browserIntialization"/>
         </methods>
-      </class> <!-- LoginSuite.SelectClass -->
+      </class> <!-- LoginSuite.AudioCaptcha -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

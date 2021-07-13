@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jun 16 15:34:49 IST 2021</td>
+<td>Started on:</td><td>Tue Jul 13 13:54:18 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>15 seconds (15852 ms)</td>
+<tr><td>Total time:</td><td>52 seconds (52961 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,21 +75,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='LoginSuite.SelectClass.handleDropdown()'><b>handleDropdown</b><br>Test class: LoginSuite.SelectClass</td>
-<td><div><pre>org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been &quot;select&quot; but was &quot;div&quot;
-Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
-System info: host: &apos;IXC1-LTC23F2X2&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:49)
-	at LoginSuite.SelectClass.handleDropdown(SelectClass.java:34)
+<td title='LoginSuite.AudioCaptcha.registerNewUser()'><b>registerNewUser</b><br>Test class: LoginSuite.AudioCaptcha</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at LoginSuite.AudioCaptcha.registerNewUser(AudioCaptcha.java:32)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace489047267", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace489047267'><pre>org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been &quot;select&quot; but was &quot;div&quot;
-Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
-System info: host: &apos;IXC1-LTC23F2X2&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:49)
-	at LoginSuite.SelectClass.handleDropdown(SelectClass.java:34)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1723290893", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1723290893'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at LoginSuite.AudioCaptcha.registerNewUser(AudioCaptcha.java:32)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -119,8 +111,79 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>15</td>
-<td>LoginSuite.SelectClass@42a48628</td></tr>
+<td>0</td>
+<td>LoginSuite.AudioCaptcha@36bc55de</td></tr>
+<tr>
+<td title='LoginSuite.AudioCaptcha.browserIntialization()'><b>browserIntialization</b><br>Test class: LoginSuite.AudioCaptcha</td>
+<td><div><pre>java.lang.NoClassDefFoundError: org/apache/commons/exec/DaemonExecutor
+	at org.openqa.selenium.os.OsProcess.&lt;init&gt;(OsProcess.java:54)
+	at org.openqa.selenium.os.CommandLine.&lt;init&gt;(CommandLine.java:36)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:127)
+	at org.openqa.selenium.opera.OperaDriver.&lt;init&gt;(OperaDriver.java:173)
+	at org.openqa.selenium.opera.OperaDriver.&lt;init&gt;(OperaDriver.java:160)
+	at org.openqa.selenium.opera.OperaDriver.&lt;init&gt;(OperaDriver.java:115)
+	at Utility.BrowserSetup.StartApplication(BrowserSetup.java:38)
+	at LoginSuite.AudioCaptcha.browserIntialization(AudioCaptcha.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.exec.DaemonExecutor
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 40 more
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2001115307", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2001115307'><pre>java.lang.NoClassDefFoundError: org/apache/commons/exec/DaemonExecutor
+	at org.openqa.selenium.os.OsProcess.&lt;init&gt;(OsProcess.java:54)
+	at org.openqa.selenium.os.CommandLine.&lt;init&gt;(CommandLine.java:36)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:127)
+	at org.openqa.selenium.opera.OperaDriver.&lt;init&gt;(OperaDriver.java:173)
+	at org.openqa.selenium.opera.OperaDriver.&lt;init&gt;(OperaDriver.java:160)
+	at org.openqa.selenium.opera.OperaDriver.&lt;init&gt;(OperaDriver.java:115)
+	at Utility.BrowserSetup.StartApplication(BrowserSetup.java:38)
+	at LoginSuite.AudioCaptcha.browserIntialization(AudioCaptcha.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.exec.DaemonExecutor
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 40 more
+</pre></div></td>
+<td>52</td>
+<td>LoginSuite.AudioCaptcha@36bc55de</td></tr>
 </table><p>
 </body>
 </html>

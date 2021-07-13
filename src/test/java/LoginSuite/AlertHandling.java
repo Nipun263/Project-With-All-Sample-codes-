@@ -1,35 +1,34 @@
 package LoginSuite;
 
+import java.io.IOException;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import Utility.BrowserSetup;
+import Utility.CaptureScreenShot;
+
 public class AlertHandling {
+	public static WebDriver driver;
 
-	WebDriver driver;
-
-	@BeforeSuite
-	public void setUp() {
-		System.setProperty("webdriver.gecko.driver",
-				"C:\\Users\\e5584133\\Downloads\\geckodriver-v0.28.0-win64\\geckodriver.exe");
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(900, TimeUnit.SECONDS);
-
+	public AlertHandling(WebDriver driver) {
+		this.driver = driver;
 	}
 
-	@Test
-	public void handleAlert() {
+
+	public void callBrowser() {
+		driver = BrowserSetup.StartApplication(driver, "Firefox");
+	}
+
+	
+	
+	public void   handleAlert() throws IOException, InterruptedException {
 		driver.get("http://demo.automationtesting.in/Alerts.html");
+		CaptureScreenShot.takeScreenShot(driver);
 		List<WebElement> LL = driver.findElements(By.tagName("a"));
 
 		WebElement alertClick = driver.findElement(By.xpath("//*[@onClick='alertbox()']"));
@@ -41,6 +40,20 @@ public class AlertHandling {
 		String SS = alert.getText();
 		System.out.print("Alert handled +      " + SS);
 
+		
+	}
+	
+	public void quitBrowser() {
+	driver = 	BrowserSetup.tearDown(driver);
 	}
 
+	
+	  public static void main(String[] args) throws IOException,
+	  InterruptedException { AlertHandling AL = new AlertHandling(driver);
+	  AL.callBrowser(); 
+	  AL.handleAlert();
+	  AL.quitBrowser();
+	  
+	  }
+	 
 }

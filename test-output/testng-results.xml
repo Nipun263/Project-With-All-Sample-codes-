@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-22T17:41:54 IST" name="Default suite" finished-at="2021-06-22T17:42:07 IST" duration-ms="13196">
+  <suite started-at="2021-07-13T14:24:02 IST" name="Default suite" finished-at="2021-07-13T14:24:06 IST" duration-ms="4734">
     <groups>
     </groups>
-    <test started-at="2021-06-22T17:41:54 IST" name="Default test" finished-at="2021-06-22T17:42:07 IST" duration-ms="13196">
-      <class name="LoginSuite.ColourChange">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:LoginSuite.ColourChange@130d63be]" started-at="2021-06-22T17:41:47 IST" name="setUp" finished-at="2021-06-22T17:41:54 IST" duration-ms="6288" status="PASS">
+    <test started-at="2021-07-13T14:24:02 IST" name="Default test" finished-at="2021-07-13T14:24:06 IST" duration-ms="4734">
+      <class name="LoginSuite.AudioCaptcha">
+        <test-method signature="browserIntialization()[pri:1, instance:LoginSuite.AudioCaptcha@36bc55de]" started-at="2021-07-13T14:24:02 IST" name="browserIntialization" finished-at="2021-07-13T14:24:06 IST" duration-ms="4183" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyColourChange()[pri:0, instance:LoginSuite.ColourChange@130d63be]" started-at="2021-06-22T17:41:54 IST" name="verifyColourChange" finished-at="2021-06-22T17:42:07 IST" duration-ms="13147" status="PASS">
+        </test-method> <!-- browserIntialization -->
+        <test-method signature="listenToAudio()[pri:2, instance:LoginSuite.AudioCaptcha@36bc55de]" started-at="2021-07-13T14:24:06 IST" name="listenToAudio" finished-at="2021-07-13T14:24:06 IST" duration-ms="513" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyColourChange -->
-      </class> <!-- LoginSuite.ColourChange -->
+        </test-method> <!-- listenToAudio -->
+      </class> <!-- LoginSuite.AudioCaptcha -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

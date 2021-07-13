@@ -3,7 +3,7 @@ package LoginSuite;
 import java.sql.*;
 
 
-public class DataBaseConnectivity extends BaseClass {
+public class DataBaseConnectivity {
 	
 	
 	
