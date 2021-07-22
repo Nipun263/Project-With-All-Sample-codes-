@@ -27,8 +27,7 @@ public class MultipleCheckBox {
 		driver.get("https://www.seleniumeasy.com/test/basic-checkbox-demo.html");
 		
 
-		WebElement singleCheckBox = driver.findElement(By.xpath("//*[@id='check1']/preceding-sibling::div//input"));
-
+		
 		List<WebElement> allcheckBoxes = driver
 				.findElements(By.xpath("//*[@id='check1']/preceding-sibling::div//input"));
 
