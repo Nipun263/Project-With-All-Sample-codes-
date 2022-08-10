@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+    
+      <class name="com.TestCases.TestCase_ExcelReading"/>
+      <class name="com.TestCases.TestCase_DataProvider_TestNG"/>
+      <class name="com.TestCases.TestCase_ScrollPage"/>
+      <class name="com.TestCases.TestCase_NestedFrame"/>
+      <class name="com.TestCases.TestCase_ColorChange"/>
+      <class name="com.TestCases.TestCase_GroupingConcept"/>
+      <class name="com.TestCases.TestCase_HighlightElement"/>
+      <class name="com.TestCases.TestCase_HashMapImplementation"/>
+      <class name="com.TestCases.TestCases_BrokenLinl"/>
+      <class name="com.TestCases.TestCase_HashMapWithExcel"/>
+      <class name="com.TestCases.TestCase_Pagination"/>
+      <class name="com.TestCases.TestCase_HandleRobotClass"/>
+      <class name="com.TestCases.TestCase_FrameHandling"/>
+      <class name="com.TestCases.TestClass_SelectDeselect"/>
+      <class name="com.TestCases.TestCase_HandleStaleElement"/>
+      <class name="com.TestCases.TestCase_CsvFileReader"/>
+      <class name="com.TestCases.TestCase_TextFileReader"/>
+      <class name="com.TestCases.TestCase_WindowHandler"/>
+      
+     
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

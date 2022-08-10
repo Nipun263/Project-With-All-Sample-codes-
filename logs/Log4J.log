@@ -1,0 +1,5 @@
+[DEBUG] 2021-12-28 16:27:51.305 [main] PaginationVerify - This is a debug message
+[INFO ] 2021-12-28 16:27:51.310 [main] PaginationVerify - This is an info message
+[WARN ] 2021-12-28 16:27:51.310 [main] PaginationVerify - This is a warn message
+[ERROR] 2021-12-28 16:27:51.311 [main] PaginationVerify - This is an error message
+[FATAL] 2021-12-28 16:27:51.311 [main] PaginationVerify - This is a fatal message
